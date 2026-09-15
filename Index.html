@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Kupu-Kupu | MGF</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            🦋 MGF
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#project">Project</a>
+            <a href="#bahan">Bahan</a>
+            <a href="#rangkaian">Rangkaian</a>
+            <a href="#langkah">Langkah</a>
+            <a href="#kode">Kode</a>
+            <a href="#hasil">Hasil</a>
+        </nav>
+
+        <button id="themeBtn" aria-label="Ganti mode">
+            ☾
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">
+                PROJECT DOKUMENTASI
+            </p>
+
+            <h1>
+                Kupu-Kupu
+                <span>ESP32 + Breadboard</span>
+            </h1>
+
+            <p>
+                Project sederhana menggunakan ESP32, dua servo
+                motor, dan breadboard untuk membuat mekanisme
+                sayap kupu-kupu yang dapat bergerak.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#project" class="btn primary">
+                    Lihat Project
+                </a>
+
+                <a href="#kode" class="btn outline">
+                    Lihat Kode
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO KUPU-KUPU -->
+
+        <div class="hero-photo">
+
+            <img src="Butterfly.png"
+                 alt="Foto Project Kupu-Kupu">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT ================= -->
+
+<section id="project" class="section">
+
+    <div class="section-heading">
+
+        <p>01 — PROJECT</p>
+
+        <h2>Tentang Project</h2>
+
+    </div>
+
+
+    <div class="project-grid">
+
+        <!-- FOTO KUPU-KUPU -->
+
+        <div class="project-photo">
+
+            <img src="kupu.png"
+                 alt="Kupu-Kupu ESP32">
+
+        </div>
+
+
+        <div class="project-info">
+
+            <h3>
+                Kupu-Kupu Bergerak dengan ESP32
+            </h3>
+
+            <p>
+                Project ini adalah sebuah mekanisme kupu-kupu
+                yang dibuat menggunakan ESP32 sebagai
+                mikrokontroler utama.
+            </p>
+
+            <p>
+                Dua buah servo motor digunakan untuk menggerakkan
+                bagian sayap kanan dan kiri. Kedua servo
+                dikendalikan melalui program sehingga sayap
+                dapat bergerak secara bersamaan.
+            </p>
+
+            <p>
+                Breadboard digunakan sebagai tempat untuk
+                menghubungkan jalur listrik dan mempermudah
+                pemasangan kabel tanpa harus melakukan penyolderan.
+            </p>
+
+
+            <div class="project-info-box">
+
+                <div>
+                    <span>Mikrokontroler</span>
+                    <strong>ESP32</strong>
+                </div>
+
+                <div>
+                    <span>Aktuator</span>
+                    <strong>2 Servo</strong>
+                </div>
+
+                <div>
+                    <span>Media Rangkaian</span>
+                    <strong>Breadboard</strong>
+                </div>
+
+                <div>
+                    <span>Bahasa</span>
+                    <strong>C++</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BAHAN ================= -->
+
+<section id="bahan" class="section light-section">
+
+    <div class="section-heading">
+
+        <p>02 — MATERIAL</p>
+
+        <h2>Bahan & Komponen</h2>
+
+    </div>
+
+
+    <div class="materials">
+
+        <article class="material">
+
+            <div class="material-number">01</div>
+
+            <h3>ESP32</h3>
+
+            <p>
+                Mikrokontroler utama yang digunakan untuk
+                mengatur pergerakan kedua servo.
+            </p>
+
+        </article>
+
+
+        <article class="material">
+
+            <div class="material-number">02</div>
+
+            <h3>2 Servo Motor</h3>
+
+            <p>
+                Satu servo digunakan untuk menggerakkan
+                sayap kanan dan satu servo untuk sayap kiri.
+            </p>
+
+        </article>
+
+
+        <article class="material">
+
+            <div class="material-number">03</div>
+
+            <h3>Breadboard</h3>
+
+            <p>
+                Digunakan sebagai media untuk menghubungkan
+                ESP32 dengan servo.
+            </p>
+
+        </article>
+
+
+        <article class="material">
+
+            <div class="material-number">04</div>
+
+            <h3>Kabel Jumper</h3>
+
+            <p>
+                Digunakan untuk menghubungkan pin ESP32,
+                breadboard, dan servo.
+            </p>
+
+        </article>
+
+
+        <article class="material">
+
+            <div class="material-number">05</div>
+
+            <h3>Sayap Kupu-Kupu</h3>
+
+            <p>
+                Bagian mekanik yang bergerak mengikuti
+                gerakan servo.
+            </p>
+
+        </article>
+
+
+        <article class="material">
+
+            <div class="material-number">06</div>
+
+            <h3>Sumber Daya</h3>
+
+            <p>
+                Digunakan untuk memberikan daya kepada
+                ESP32 dan servo.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RANGKAIAN ================= -->
+
+<section id="rangkaian" class="section">
+
+    <div class="section-heading">
+
+        <p>03 — WIRING</p>
+
+        <h2>Rangkaian ESP32 + Breadboard</h2>
+
+    </div>
+
+
+    <div class="wiring">
+
+        <!-- FOTO RANGKAIAN TERPISAH -->
+
+        <div class="wiring-image">
+
+            <img src="Rangkaian.png"
+                 alt="Foto Rangkaian ESP32 dan Breadboard">
+
+        </div>
+
+
+        <div class="wiring-info">
+
+            <h3>Hubungan Pin</h3>
+
+            <div class="pin-list">
+
+                <div class="pin">
+                    <span>Servo Kanan — Signal</span>
+                    <strong>GPIO 25</strong>
+                </div>
+
+                <div class="pin">
+                    <span>Servo Kiri — Signal</span>
+                    <strong>GPIO 26</strong>
+                </div>
+
+                <div class="pin">
+                    <span>VCC Servo</span>
+                    <strong>5V</strong>
+                </div>
+
+                <div class="pin">
+                    <span>GND Servo</span>
+                    <strong>GND</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="warning">
+
+        ⚠️ <strong>Catatan:</strong>
+        Pastikan GND ESP32 dan GND sumber daya servo
+        terhubung bersama. Jika menggunakan dua servo,
+        pastikan sumber daya mampu menyediakan arus
+        yang cukup agar ESP32 tidak reset.
+
+    </div>
+
+</section>
+
+
+<!-- ================= LANGKAH ================= -->
+
+<section id="langkah" class="dark-section">
+
+    <div class="section dark-inner">
+
+        <div class="section-heading">
+
+            <p>04 — PROCESS</p>
+
+            <h2>Langkah Pengerjaan</h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <span>01</span>
+
+                <div>
+                    <h3>Siapkan Komponen</h3>
+
+                    <p>
+                        Siapkan ESP32, dua servo motor,
+                        breadboard, kabel jumper, badan
+                        dan sayap kupu-kupu.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>02</span>
+
+                <div>
+                    <h3>Pasang ESP32</h3>
+
+                    <p>
+                        Letakkan ESP32 pada posisi yang aman
+                        dan mudah dihubungkan dengan breadboard.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>03</span>
+
+                <div>
+                    <h3>Hubungkan Breadboard</h3>
+
+                    <p>
+                        Buat jalur positif dan ground pada
+                        breadboard untuk mempermudah koneksi.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>04</span>
+
+                <div>
+                    <h3>Pasang Servo</h3>
+
+                    <p>
+                        Pasang servo kanan dan kiri pada
+                        mekanisme sayap kupu-kupu.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>05</span>
+
+                <div>
+                    <h3>Hubungkan Kabel Signal</h3>
+
+                    <p>
+                        Hubungkan signal servo kanan ke GPIO 25
+                        dan servo kiri ke GPIO 26.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>06</span>
+
+                <div>
+                    <h3>Upload Program</h3>
+
+                    <p>
+                        Upload kode program ke ESP32 menggunakan
+                        Arduino IDE.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>07</span>
+
+                <div>
+                    <h3>Uji Project</h3>
+
+                    <p>
+                        Nyalakan rangkaian dan periksa apakah
+                        kedua sayap bergerak sesuai program.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KODE ================= -->
+
+<section id="kode" class="section">
+
+    <div class="section-heading">
+
+        <p>05 — CODE</p>
+
+        <h2>Kode Program ESP32</h2>
+
+    </div>
+
+
+    <p class="code-desc">
+
+        Program digunakan untuk mengontrol dua servo.
+        Servo bergerak dengan sudut berlawanan agar
+        menghasilkan gerakan mengepak pada sayap.
+
+    </p>
+
+
+    <div class="code-container">
+
+        <div class="code-header">
+
+            <span>butterfly.ino</span>
+
+            <button id="copyBtn">
+                Copy Code
+            </button>
+
+        </div>
+
+
+<pre><code id="code">#include &lt;ESP32Servo.h&gt;
+
+Servo servoKanan;
+Servo servoKiri;
+
+const int pinServoKanan = 25;
+const int pinServoKiri = 26;
+
+void setup() {
+
+    servoKanan.attach(pinServoKanan);
+    servoKiri.attach(pinServoKiri);
+
+    servoKanan.write(90);
+    servoKiri.write(90);
+
+    delay(1000);
+}
+
+void loop() {
+
+    // Sayap bergerak ke atas
+    servoKanan.write(60);
+    servoKiri.write(120);
+
+    delay(300);
+
+    // Sayap bergerak ke bawah
+    servoKanan.write(120);
+    servoKiri.write(60);
+
+    delay(300);
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HASIL ================= -->
+
+<section id="hasil" class="section result-section">
+
+    <div class="section-heading">
+
+        <p>06 — RESULT</p>
+
+        <h2>Hasil Project</h2>
+
+    </div>
+
+
+    <div class="result">
+
+        <!-- FOTO KUPU-KUPU -->
+
+        <div class="result-photo">
+
+            <img src="Butterfly.png"
+                 alt="Hasil Project Kupu-Kupu">
+
+        </div>
+
+
+        <div class="result-text">
+
+            <h3>Project Berhasil!</h3>
+
+            <p>
+                Setelah seluruh komponen terpasang dan program
+                dijalankan, kedua servo akan bergerak sesuai
+                perintah dari ESP32.
+            </p>
+
+            <p>
+                Gerakan servo kemudian diteruskan ke mekanisme
+                sayap sehingga kupu-kupu dapat mengepakkan
+                kedua sayapnya.
+            </p>
+
+
+            <div class="tags">
+
+                <span>ESP32</span>
+                <span>Servo</span>
+                <span>Breadboard</span>
+                <span>C++</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <h3>🦋 MGF</h3>
+
+            <p>
+                Dokumentasi Project ESP32
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                M. Galang Febriansyah
+            </p>
+
+            <p>
+                XI PPLG 1 — SMK Informatika CBI
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 MGF — Project Kupu-Kupu ESP32
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

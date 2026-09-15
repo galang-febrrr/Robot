@@ -1,0 +1,855 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #f7f8fc;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #697386;
+    --border: #e4e7ef;
+
+    --dark: #0d1322;
+    --dark-card: #151c2d;
+
+    --accent: #7167ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.7;
+
+    transition:
+        background-color .4s ease,
+        color .4s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 999;
+
+    background: rgba(13, 19, 34, .9);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #283247;
+}
+
+.nav-container {
+    width: min(1200px, 90%);
+
+    height: 72px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+
+    gap: 24px;
+}
+
+nav a {
+    color: #d7dced;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #9189ff;
+}
+
+
+/* TOMBOL MODE */
+
+#themeBtn {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid #46506a;
+
+    background: #1b2438;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+#themeBtn:hover {
+    transform: rotate(20deg) scale(1.08);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 120px 5% 70px;
+
+    background: #0d1322;
+
+    color: white;
+}
+
+.hero-container {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.eyebrow,
+.section-heading p {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: var(--accent);
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #8d85ff;
+}
+
+.hero-text > p:not(.eyebrow) {
+    max-width: 560px;
+
+    margin-top: 28px;
+
+    color: #aeb7c9;
+}
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.primary {
+    background: var(--accent);
+
+    color: white;
+}
+
+.outline {
+    border: 1px solid #536079;
+
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-photo {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.35);
+}
+
+.hero-photo img {
+    height: 550px;
+
+    object-fit: cover;
+
+    transition: .6s;
+}
+
+.hero-photo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.section {
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    padding: 110px 0;
+
+    background: transparent;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 55px);
+
+    line-height: 1.1;
+}
+
+
+/* ========================================
+   PROJECT
+======================================== */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.project-photo {
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.project-photo img {
+    height: 500px;
+
+    object-fit: cover;
+
+    transition: .6s;
+}
+
+.project-photo:hover img {
+    transform: scale(1.04);
+}
+
+.project-info h3 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+.project-info-box {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.project-info-box div {
+    padding: 18px;
+
+    border: 1px solid var(--border);
+}
+
+.project-info-box span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.project-info-box strong {
+    font-size: 14px;
+}
+
+
+/* ========================================
+   BAHAN
+======================================== */
+
+.light-section {
+    width: 100%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    background: var(--card);
+
+    transition:
+        background-color .4s ease,
+        color .4s ease;
+}
+
+.light-section .section-heading,
+.light-section .materials {
+    width: min(1200px, 100%);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.materials {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.material {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--bg);
+
+    transition:
+        transform .4s ease,
+        background-color .4s ease,
+        border-color .4s ease;
+}
+
+.material:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--accent);
+}
+
+.material-number {
+    color: var(--accent);
+
+    font-size: 12px;
+
+    margin-bottom: 35px;
+}
+
+.material h3 {
+    margin-bottom: 10px;
+}
+
+.material p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   RANGKAIAN
+======================================== */
+
+.wiring {
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.wiring-image {
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+}
+
+.wiring-image img {
+    min-height: 350px;
+
+    object-fit: cover;
+}
+
+.wiring-info h3 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.pin-list {
+    border-top: 1px solid var(--border);
+}
+
+.pin {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background-color .4s ease,
+        border-color .4s ease;
+}
+
+.pin span {
+    color: var(--muted);
+}
+
+.pin strong {
+    color: var(--accent);
+}
+
+.warning {
+    margin-top: 35px;
+
+    padding: 20px;
+
+    border: 1px solid #e6d38a;
+
+    border-radius: 10px;
+
+    background: rgba(255, 244, 190, .25);
+
+    color: var(--muted);
+
+    transition:
+        background-color .4s ease,
+        border-color .4s ease;
+}
+
+
+/* ========================================
+   DARK SECTION
+======================================== */
+
+.dark-section {
+    width: 100%;
+
+    background: #0d1322;
+
+    color: white;
+}
+
+.dark-inner {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.dark-inner .section-heading p {
+    color: #8f87ff;
+}
+
+.steps {
+    max-width: 900px;
+}
+
+.step {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 25px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #283247;
+}
+
+.step > span {
+    color: #8f87ff;
+
+    font-weight: 800;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: #929caf;
+}
+
+
+/* ========================================
+   CODE
+======================================== */
+
+.code-desc {
+    color: var(--muted);
+
+    max-width: 700px;
+
+    margin-bottom: 30px;
+}
+
+.code-container {
+    background: #0a0f1a;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.15);
+}
+
+.code-header {
+    height: 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #283247;
+
+    color: #cbd2e1;
+
+    font-size: 13px;
+}
+
+#copyBtn {
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #46506a;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#copyBtn:hover {
+    background: #202a3d;
+}
+
+pre {
+    padding: 25px;
+
+    overflow-x: auto;
+
+    color: #d7dcef;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   HASIL
+======================================== */
+
+.result {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.result-photo {
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.result-photo img {
+    height: 450px;
+
+    object-fit: cover;
+}
+
+.result-text h3 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.result-text p {
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.tags span {
+    background: var(--accent);
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #080d17;
+
+    color: white;
+
+    padding: 55px 5% 25px;
+}
+
+.footer-inner {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 35px;
+}
+
+.footer-inner p {
+    color: #8f99ad;
+
+    font-size: 13px;
+}
+
+.copyright {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #283247;
+
+    color: #687287;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   MODE GELAP
+======================================== */
+
+body.dark {
+    --bg: #0d1322;
+    --card: #151c2d;
+    --text: #f5f7ff;
+    --muted: #9ca7ba;
+    --border: #283247;
+}
+
+body.dark .light-section {
+    background: #0d1322;
+}
+
+body.dark .material {
+    background: #151c2d;
+
+    border-color: #283247;
+}
+
+body.dark .project-info-box {
+    border-color: #283247;
+}
+
+body.dark .project-info-box div {
+    border-color: #283247;
+}
+
+body.dark .warning {
+    background: #151c2d;
+
+    border-color: #665d28;
+}
+
+body.dark .wiring-image {
+    border-color: #283247;
+}
+
+body.dark .pin {
+    border-color: #283247;
+}
+
+
+/* ========================================
+   ANIMASI
+======================================== */
+
+.section-heading,
+.project-grid,
+.material,
+.wiring,
+.step,
+.code-container,
+.result {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 850px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-container,
+    .project-grid,
+    .wiring,
+    .result {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-photo img {
+        height: 400px;
+    }
+
+    .materials {
+        grid-template-columns: 1fr;
+    }
+
+    .project-photo img {
+        height: 400px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+}
